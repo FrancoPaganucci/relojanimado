@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    display: inline-block;
+    color: chocolate;
+    background-color: black;
+    width: 100%;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+main {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: chocolate;
+    padding: 5%;
+}
+
+.contenedor {
+    width: 80%;
+    border: 1rem black solid;
+    padding: 2rem;
+    margin: auto;
+    background-color: blanchedalmond;
+    position: relative;
+    border-radius: 50%;
+}
+
+.contenedor img {
+    /* posicion relativa para poder usar los otros divs?*/
+    position: relative;
+    z-index: 50;
+}
+
+.centro {
+    /* absolute sobre el padre, no sobre el viewport*/
+    position: absolute;
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    background-color: black;
+    /* normalize + auto para centrar */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.segundos {
+    /* estilo */
+    width: 0.7%;
+    height: 38%;
+    background-color: black;
+    border-radius: 10px;
+    /* posicion */
+    position: absolute;
+    top: 12%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    /* animacion */
+    animation: segundos 60s linear 0s infinite;
+    transform-origin: bottom;
+}
+/* keyframe para el segundero */
+@keyframes segundos {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+.minutos {
+    /* estilo */
+    width: 1.5%;
+    height: 35%;
+    background-color: black;
+    border-radius: 10px;
+    /* posicion */
+    position: absolute;
+    top: 15%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    /* animacion */
+    animation: minutos 3600s linear 60s infinite;
+    transform-origin: bottom;
+}
+
+/* keyframe para el minutero */
+@keyframes minutos {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+
+.horas {
+    /* estilo */
+    width: 3%;
+    height: 25%;
+    background-color: black;
+    border-radius: 10px;
+    /* posicion */
+    position: absolute;
+    top: 25%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: 0 auto;
+    /* animacion */
+    animation: horas 86400s linear 3600s infinite;
+    transform-origin: bottom;
+}
+
+/* keyframe hora */
+@keyframes horas {
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
